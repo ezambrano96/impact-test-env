@@ -1,0 +1,1 @@
+This directory is not used. The CartContext.js file has been moved to the src/context directory.

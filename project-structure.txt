@@ -1,0 +1,49 @@
+impact-ecommerce-test/
+├── docker-compose.yml
+├── frontend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── public/
+│   └── src/
+│       ├── App.js
+│       ├── components/
+│       │   ├── Header.js
+│       │   ├── Footer.js
+│       │   ├── ProductList.js
+│       │   ├── ProductCard.js
+│       │   ├── ProductDetail.js
+│       │   ├── Cart.js
+│       │   ├── CartItem.js
+│       │   ├── Checkout.js
+│       │   └── OrderConfirmation.js
+│       ├── context/
+│       │   └── CartContext.js
+│       ├── pages/
+│       │   ├── HomePage.js
+│       │   ├── ProductPage.js
+│       │   ├── CartPage.js
+│       │   ├── CheckoutPage.js
+│       │   └── OrderConfirmationPage.js
+│       ├── utils/
+│       │   ├── api.js
+│       │   └── trackingUtils.js
+│       └── index.js
+├── backend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── server.js
+│   ├── routes/
+│   │   ├── products.js
+│   │   └── orders.js
+│   ├── models/
+│   │   ├── Product.js
+│   │   └── Order.js
+│   ├── controllers/
+│   │   ├── productController.js
+│   │   └── orderController.js
+│   ├── middleware/
+│   │   └── trackingMiddleware.js
+│   └── utils/
+│       └── seedDB.js
+└── mongo-init/
+    └── init-mongo.js

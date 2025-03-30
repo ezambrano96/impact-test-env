@@ -1,0 +1,25 @@
+{
+  "name": "impact-ecommerce-test-env",
+  "version": "1.0.0",
+  "description": "Test environment for Impact.com affiliate tracking integration",
+  "scripts": {
+    "start": "bash ./podman-start.sh",
+    "stop": "bash ./podman-stop.sh",
+    "cleanup": "bash ./podman-cleanup.sh",
+    "restart": "bash ./podman-stop.sh && bash ./podman-start.sh",
+    "logs:frontend": "podman logs -f impact-frontend",
+    "logs:backend": "podman logs -f impact-backend",
+    "logs:mongo": "podman logs -f impact-mongo",
+    "seed": "podman exec impact-backend npm run seed",
+    "test:tracking": "cd tests && ./simulate_tracking.sh"
+  },
+  "keywords": [
+    "impact",
+    "affiliate",
+    "tracking",
+    "ecommerce",
+    "podman"
+  ],
+  "author": "",
+  "license": "MIT"
+}
