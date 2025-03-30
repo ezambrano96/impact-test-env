@@ -1,0 +1,46 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        
+    - name: Backend Install
+      working-directory: ./backend
+      run: npm install
+      
+    - name: Frontend Install
+      working-directory: ./frontend
+      run: npm install
+      
+    - name: Check Backend Syntax
+      working-directory: ./backend
+      run: node -c server.js
+      
+    # Add more test steps as needed
+    # For example, you could add unit tests, integration tests, etc.
+    
+  # Uncomment if you want to add a deployment job
+  # deploy:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main'
+  #   
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   
+  #   - name: Deploy
+  #     # Add deployment steps here

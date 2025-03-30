@@ -32,8 +32,8 @@ This project provides a simplified e-commerce application with the following fea
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
-   cd impact.com_test_env
+   git clone https://github.com/ezambrano96/impact-test-env.git
+   cd impact-test-env
    ```
 
 2. Make the scripts executable:
